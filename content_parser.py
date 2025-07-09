@@ -8,7 +8,7 @@ cursor = conn.cursor()
 cursor.execute("SELECT link FROM articles")
 rows = cursor.fetchall()
 
-for i in range(0, 5):
+for i in range(0, len(rows)):
     url = rows[i][0]
 
     if url.endswith('/'):
